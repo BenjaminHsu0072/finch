@@ -1,0 +1,20 @@
+{
+  "name": "tsfinch",
+  "version": "0.1.0",
+  "description": "A simple typescript HTTP server.",
+  "main": "index.js",
+  "keywords": [],
+  "author": "BenjaminHsu",
+  "dependencies": {
+    "busboy": "^0.3.1",
+    "cookie": "^0.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenjaminHsu0072/finch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BenjaminHsu0072/finch/issues"
+  },
+  "homepage": "https://github.com/BenjaminHsu0072/finch#readme"
+}
