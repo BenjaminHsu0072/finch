@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var Fish_1 = require("./Fish");
-exports.Fish = Fish_1.Fish;
+var finch_1 = require("./finch");
+exports.Finch = finch_1.Finch;
 var logger_1 = require("./logger");
 exports.logger = logger_1.logger;
 var cookieParser_1 = require("./middleware/cookieParser");

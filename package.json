@@ -1,11 +1,12 @@
 {
   "name": "tsfinch",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A simple typescript HTTP server.",
   "main": "index.js",
   "keywords": [],
   "author": "BenjaminHsu",
   "dependencies": {
+    "@types/node": "^13.11.0",
     "busboy": "^0.3.1",
     "cookie": "^0.4.0"
   },

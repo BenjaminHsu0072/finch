@@ -34,7 +34,7 @@ class Finch {
         }
     }
 }
-exports.Fish = Finch;
+exports.Finch = Finch;
 function prc(req, res, handles) {
     let i = 0;
     function callNext() {
