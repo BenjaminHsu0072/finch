@@ -1,7 +1,8 @@
 {
   "name": "tsfinch",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A simple typescript HTTP server.",
+  "license": "MIT",
   "main": "index.js",
   "keywords": [],
   "author": "BenjaminHsu",

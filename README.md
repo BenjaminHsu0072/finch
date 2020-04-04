@@ -7,7 +7,10 @@ Unlike other middleware systems, this code does not encapsulate the `request`( a
  `IncomingMessage` ) and `response` ( as `ServerResponse`) objects of the node itself.  
 You can do whatever you want with native objects.
 
-#### USAGE
+#### install
+` npm install tsfinch`
+
+#### Usage
 
 ```typescript
 import {Finch, postParser, responseJson, responseStaticFiles} from "tsfinch";
