@@ -55,7 +55,7 @@ class Finch
     public listen(port: number): void
     {
         this.server.listen(port);
-        console.log(`A Fish is Listening Http Request At ${port}`);
+        console.log(`Finch is Listening Http Request At ${port}`);
     }
 
     public use(handle: string, middleWare: middleWareFunction): void
@@ -143,7 +143,7 @@ function createRequestListener(app: Finch): middleWareFunction
 
         if (app.handles.hasOwnProperty(pathname))
         {
-            logger("HANDLE:" + pathname,logColor.green);
+            logger(`HANDLE: ${pathname}`,logColor.green);
             try
             {
                 prc(req, res, app.handles[pathname]);
@@ -155,11 +155,11 @@ function createRequestListener(app: Finch): middleWareFunction
         }
         if (staticFilePath)
         {
-            logger("HANDLE:" + "STATIC");
+            logger(`HANDLE: STATIC:: ${pathname}`);
             responseStaticFiles(res, staticFilePath);
             return;
         }
-        logger("NO_HANDLE!",logColor.red);
+        logger(`NO_HANDLE! ${pathname}`,logColor.red);
         response404(res);
     }
 }

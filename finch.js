@@ -16,7 +16,7 @@ class Finch {
     }
     listen(port) {
         this.server.listen(port);
-        console.log(`A Fish is Listening Http Request At ${port}`);
+        console.log(`Finch is Listening Http Request At ${port}`);
     }
     use(handle, middleWare) {
         if (!this.handles.hasOwnProperty(handle)) {
@@ -78,7 +78,7 @@ function createRequestListener(app) {
         req.query = theQuery;
         req.pathName = pathname;
         if (app.handles.hasOwnProperty(pathname)) {
-            logger_1.logger("HANDLE:" + pathname, logger_1.logColor.green);
+            logger_1.logger(`HANDLE: ${pathname}`, logger_1.logColor.green);
             try {
                 prc(req, res, app.handles[pathname]);
             }
@@ -88,11 +88,11 @@ function createRequestListener(app) {
             return;
         }
         if (staticFilePath) {
-            logger_1.logger("HANDLE:" + "STATIC");
+            logger_1.logger(`HANDLE: STATIC:: ${pathname}`);
             response_1.responseStaticFiles(res, staticFilePath);
             return;
         }
-        logger_1.logger("NO_HANDLE!", logger_1.logColor.red);
+        logger_1.logger(`NO_HANDLE! ${pathname}`, logger_1.logColor.red);
         response_1.response404(res);
     };
 }
