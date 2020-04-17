@@ -27,13 +27,9 @@ interface postFileInfo
 
 interface middleWareFunction
 {
-    (req: parsedRequest, res: ServerResponse, next?: nextFunc): void;
+    (req: parsedRequest, res: ServerResponse, next?: middleWareFunction): void;
 }
 
-interface nextFunc
-{
-    (): void
-}
 
 interface handles
 {
@@ -164,4 +160,4 @@ function createRequestListener(app: Finch): middleWareFunction
     }
 }
 
-export {Finch,parsedRequest,nextFunc,postFileInfo}
+export {Finch,middleWareFunction,parsedRequest,ServerResponse,postFileInfo}

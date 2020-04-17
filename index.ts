@@ -1,4 +1,4 @@
-export {Finch} from './finch';
+export {Finch,middleWareFunction,parsedRequest,ServerResponse,postFileInfo} from './finch';
 
 export {logger} from './logger';
 

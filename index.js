@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var finch_1 = require("./finch");
 exports.Finch = finch_1.Finch;
+exports.ServerResponse = finch_1.ServerResponse;
 var logger_1 = require("./logger");
 exports.logger = logger_1.logger;
 var cookieParser_1 = require("./middleware/cookieParser");

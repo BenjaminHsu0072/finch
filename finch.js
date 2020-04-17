@@ -5,6 +5,9 @@ const http = require("http");
 const url = require("url");
 const fs = require("fs");
 const path = require("path");
+//node.js class and interfaces
+const http_1 = require("http");
+exports.ServerResponse = http_1.ServerResponse;
 //build in modules
 const logger_1 = require("./logger");
 const response_1 = require("./response");
