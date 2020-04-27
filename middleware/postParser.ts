@@ -7,6 +7,11 @@ import Busboy = require("busboy");
 const maxPostMessageSize = 2*1024*1024;
 
 function postParser(req:parsedRequest, res:ServerResponse, next:nextFunc) {
+    if(req.method!=="POST")
+    {
+        next();
+        return;
+    }
     req.postFields={};
     req.postFiles=[];
     if(!fs.existsSync("./upload"))

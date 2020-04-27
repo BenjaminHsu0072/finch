@@ -6,6 +6,10 @@ const path = require("path");
 const Busboy = require("busboy");
 const maxPostMessageSize = 2 * 1024 * 1024;
 function postParser(req, res, next) {
+    if (req.method !== "POST") {
+        next();
+        return;
+    }
     req.postFields = {};
     req.postFiles = [];
     if (!fs.existsSync("./upload")) {
