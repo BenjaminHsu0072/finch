@@ -1,8 +1,5 @@
 export {Finch,middleWareFunction,parsedRequest,ServerResponse,postFileInfo} from './finch';
 
-export {logger} from './logger';
-export {logColor} from './logger';
-
 export {cookieParser} from './middleware/cookieParser';
 export {postParser} from './middleware/postParser';
 

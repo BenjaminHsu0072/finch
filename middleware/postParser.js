@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const getRandomString_1 = require("../toolFunctions/getRandomString");
+const finch_tools_1 = require("finch-tools");
 const fs = require("fs");
 const path = require("path");
 const Busboy = require("busboy");
@@ -17,7 +17,7 @@ function postParser(req, res, next) {
     }
     let busboy = new Busboy({ headers: req.headers });
     busboy.on('file', function (fieldname, file, filename, encoding, mimetype) {
-        let FN = getRandomString_1.getRandomString();
+        let FN = finch_tools_1.getRandomString();
         let saveTo = path.join("./upload", FN);
         file.pipe(fs.createWriteStream(saveTo));
         let fi = { fileName: FN, orgName: filename };

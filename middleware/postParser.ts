@@ -1,6 +1,6 @@
 import {nextFunc, parsedRequest, postFileInfo} from "../finch";
 import {ServerResponse} from "http";
-import {getRandomString} from "../toolFunctions/getRandomString";
+import {getRandomString} from "finch-tools";
 import fs = require("fs");
 import path = require("path");
 import Busboy = require("busboy");
